@@ -24,8 +24,9 @@ jobs:
         with:
           flutter-version: '3.19.6'
 
-      - name: Create platform files
-        run: flutter create .
+    - name: Create platform files
+  run: flutter create . --platforms=android --overwrite
+
 
       - name: Install dependencies
         run: flutter pub get
